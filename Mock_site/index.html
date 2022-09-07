@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mockup site</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-        <h1 >Trying something here !</h1>
+        <title>Mockup site</title>
+        <h1 style="color: rgb(35, 9, 9);margin-left: 48px;">Trying something here !</h1>
         <hr>
+        <br><br><br>
     </head>
     <body>
-        <!-- <button onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"> <h1>Click me!</h1></button> -->
-        <button id="b1" onclick="clicked()"> <h1>Click me!</h1></button>
+        <style>
+            div
+            {
+                margin-left: 48px;
+            }
+        </style>
+        <div>
+          <!-- <button onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" value="Redirect"> <h1>Click me !</h1></button> -->
+          <button style="color:rebeccapurple; border-style: groove; "  id="b1" onclick="clicked()"> <h1>Click me!</h1></button>
+          <br><br>
+          <img id="i1" src="" alt="">
+        </div>
     </body>
     <script>
+            function delay(ms) 
+            {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
             function clicked() 
             {
-                location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ",'_blank'
-                // console.log('someone clicked me');
+                document.getElementById('i1').src="https://i.kym-cdn.com/photos/images/newsfeed/000/369/488/61d.jpeg";
+                delay(1000).then(()=>{location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ",'_blank';});
+                console.log('Gotcha !')
             }
     </script>
-    
 </html>
 
